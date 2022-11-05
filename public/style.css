@@ -1,0 +1,56 @@
+section {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    width: 100%;
+    max-width: 70%;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+.butons>div {
+
+}
+
+.btn {
+    padding: 0,5em 1em;
+    background-color: #202020;
+    color: aliceblue;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    border-radius: 5px;
+    border: 1px solid #202020;
+    transition: all 0.1s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.btn_a {
+    font-family: system-ui;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    color: #202020;
+    background-color: aliceblue;
+}
+
+.btn:hover>.btn-svg {
+    fill: #202020;
+}
+
+.btn-img {
+    fill:invert(1);
+}
+
+.btn-svg {
+    fill: aliceblue;
+}
