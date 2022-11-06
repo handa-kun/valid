@@ -13,9 +13,6 @@ section {
     column-gap: 10px;
 }
 
-.butons>div {
-
-}
 
 .btn {
     padding: 0,5em 1em;
@@ -53,4 +50,12 @@ section {
 
 .btn-svg {
     fill: aliceblue;
+}
+
+.form-container {
+    justify-content: center;
+}
+
+.form-buttons {
+    justify-content: space-around;
 }

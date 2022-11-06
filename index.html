@@ -51,5 +51,72 @@
                 </div>
         </div>
     </section>
+
+    <section class="main-section">
+    </section>
+    <section class="user-interation">
+        <div class="container">
+            <h1 class="section-header">
+                Обратная связь
+            </h1>
+            <div class="form-container">
+                <form id="form" method="get">
+                    <label>
+                        Введите данные
+                        <input type="text" placeholder="Введите логин" name="login">
+                        <p class="result">
+
+                        </p>
+                        <div class="form-buttons">
+                        <button class="btn-delete" type="reset">
+                            Очистить
+                        </button>
+                        <button class="btn" type="submit">
+                            Отправить
+                        </button>
+                        </div>
+                    </label>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="sec_tab">
+        <div class="container">
+        <table id="table">
+            <tr>
+              <th>X</th>
+              <th>Результат</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+            </tr>
+          </table>
+        </div>
+    </section>
+
 </body>
+<script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+<script>
+
+    const re = new RegExp('[a-z]{3,5}');
+
+    function validateLogin(login) {
+        return re.test(login);
+    }
+
+    $('button.btn').click((e) => {
+        e.preventDefault();
+        console.log($('form#form').serializeArray());
+        const login = $('form#form').serializeArray()[0].value;
+        console.log(validateLogin(login));
+        if (validateLogin(login)) {
+           $('p.result').html('All right!')
+        } else {
+            $('p.result').html('Try again.')
+        }
+    });
+</script>
 </html>
